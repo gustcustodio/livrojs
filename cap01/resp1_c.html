@@ -1,0 +1,8 @@
+<meta charset="UTF-8">
+<!-- Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da loja. Calcule e informe o valor para pagamento à vista com 10% de desconto e o valor em 3x -->
+<script>
+    const preco = Number(prompt('Preço: R$'))
+    const aVista = preco - (preco / 10) // não é necessário o uso de parênteses
+    const parcelado = preco / 3
+    alert(`À vista: R$${aVista}\nOu 3x de R$${parcelado}`)
+</script>
