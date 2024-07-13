@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2 - Exercício A</title>
+</head>
+<body>
+    <!-- Na compra de duas unidades de um mesmo medicamento, o cliente recebe como desconto os centavos do valor total. Elaborar um programa que leia descrição e preço de um medicamento. Informe o valordo produto na promoção. -->
+     <h1>Farmácia JS</h1>
+
+     <form>
+        <p>
+            <label for="inMedicamento">Medicamento: </label>
+            <input type="text" name="medicamento" id="inMedicamento" required>
+        </p>
+        <p>
+            <label for="inPreco">Preço R$</label>
+            <input type="number" name="preco" id="inPreco" required min="0" step="0.01">
+        </p>
+        <p>
+            <input type="submit" value="Mostrar Promoção">
+        </p>
+     </form>
+
+     <h3 id="outResp1"></h3>
+     <h3 id="outResp2"></h3>
+     
+     <script src="js/resp2_a.js"></script>     
+</body>
+</html>
