@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2 - Exercício C</title>
+</head>
+<body>
+    <!-- Para aumentar suas vendas no setor de higine, cada etiqueta de produto deve exibir uma mensagem anunciando 50% de desconto (para um item) na compra de 3 unidades do produto.Elaborar um programa que leia descrição e preço de um produto. Após, apresentar as mensagens indicando a promoção. -->   
+    <h1>Supermercado JS</h1>
+    
+    <form>
+        <p> 
+            <label for="inProduto">Produto</label>
+            <input type="text" name="produto" id="inProduto" required>
+        </p>
+        <p>
+            <label for="inPreco">Preço</label>
+            <input type="number" name="preco" id="inPreco" min="0" step="0.01" required>    
+        </p>
+        <p>
+            <input type="submit" value="Ver promoção">
+        </p>
+    </form>
+    <h3 id="outResp1"></h3>
+    <h3 id="outResp2"></h3>    
+    <script src="js/resp2_c.js"></script>
+</body>
+</html>
