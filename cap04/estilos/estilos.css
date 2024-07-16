@@ -12,3 +12,7 @@ img {
 h1 {
     border-bottom-style: inset;
 }
+
+div {
+    margin-bottom: 15px;
+}
