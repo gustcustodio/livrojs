@@ -4,6 +4,10 @@ const resp2 = document.querySelector('#outResp2')
 const resp3 = document.querySelector('#outResp3')
 
 frm.addEventListener('submit', (e) => {
+    resp1.innerText = `` // limpa os elementos de saída
+    resp2.innerText = `` // limpa os elementos de saída
+    resp3.innerText = `` // limpa os elementos de saída
+
     const saque = Number(frm.inSaque.value)
 
     if (saque % 10 != 0) { // verifica se o valor do saque é múltiplo de 10
