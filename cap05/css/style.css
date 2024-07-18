@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.normal {
+    float: left;
+    width: 300px;
+}
+
+img.alta {
+    float: left;
+    width: 300px;
+    height: 420px;
+}
+
+h1 {
+    border-bottom-style: inset;
+}
+
+pre {
+    font-size: 1.2em;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+}
