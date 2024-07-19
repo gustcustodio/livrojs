@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 5 - Exemplo 4</title>
+  </head>
+  <body>
+    <script>
+      alert("Digite 0 para sair");
+      do {
+        const num = Number(prompt("Número: "));
+        // verifica se o número é 0 ou não é um número (NaN):
+        if (num == 0 || isNaN(num)) {
+          // pergunta ao usuário se deseja sair:
+          // o metódo confirm retona um valor booleano - true ou false.
+          const sair = confirm("Confirma saída? ");
+          // se true:
+          if (sair) {
+            // sai do loop:
+            break;
+            // se false:
+          } else {
+            // continua para a próxima iteração do loop:
+            continue;
+          }
+        }
+        if (num % 2 == 0) {
+          alert(`O dobro de ${num} é: ${num * 2}`);
+        } else {
+          alert(`O triplo de ${num} é: ${num * 3}`);
+        }
+      } while (true); // continua o loop indefinidamente até encontrar um "break"
+      alert("Bye, bye...");
+    </script>
+  </body>
+</html>

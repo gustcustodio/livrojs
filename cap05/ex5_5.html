@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 5 - Exemplo 5</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <img src="img/ex5_5.jpg" alt="Contas a pagar" class="alta" />
+    <h1>Programa Contas do Mês</h1>
+
+    <form>
+      <div>
+        <label for="inDescricao">Descrição da conta: </label>
+        <input type="text" name="descricao" id="inDescricao" required />
+      </div>
+      <div>
+        <label for="inValor">Valor a pagar: </label>
+        <input
+          type="number"
+          name="valor"
+          id="inValor"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+      <div>
+        <input type="submit" value="Registrar conta" />
+      </div>
+    </form>
+    <pre id="outResp1"></pre>
+    <pre id="outResp2"></pre>
+    <script src="js/ex5_5.js"></script>
+  </body>
+</html>

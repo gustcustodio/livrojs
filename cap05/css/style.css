@@ -23,6 +23,10 @@ pre {
     font-size: 1.2em;
 }
 
+div {
+    margin-top: 15px;
+}
+
 input[type="submit"] {
     margin-top: 15px;
 }
