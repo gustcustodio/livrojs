@@ -4,33 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/livrojs.png" type="image/png" />
-    <title>Capítulo 5 - Exercício A</title>
+    <title>Capítulo 5 - Exercício B</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <img src="img/exerc.jpg" alt="Exercícios" class="normal" />
-    <h1>Programa Repete Fruta</h1>
+    <h1>Programa Criação de Chinchilas</h1>
     <form>
       <div>
-        <label for="inFruta">Fruta: </label>
-        <input type="text" name="fruta" id="inFruta" required />
+        <label for="inQuantidade">Número de Chinchilas: </label>
+        <input type="number" name="numero" id="inQuantidade" min="2" required />
       </div>
       <div>
-        <label for="inQuantidade">Quantidade: </label>
-        <input
-          type="number"
-          name="quantidade"
-          id="inQuantidade"
-          min="1"
-          required
-        />
+        <label for="inAnos">Número de anos: </label>
+        <input type="number" name="anos" id="inAnos" min="1" required />
       </div>
       <div>
-        <input type="submit" value="Repetir frutas" />
+        <input type="submit" value="Mostrar previsão de Chinchilas" />
         <input type="reset" value="Limpar" />
       </div>
     </form>
-    <h3></h3>
-    <script src="js/resp5_a.js"></script>
+    <pre></pre>
+    <script src="js/resp5_b.js"></script>
   </body>
 </html>
