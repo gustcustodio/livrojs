@@ -6,7 +6,7 @@ frm.addEventListener("submit", (e) => {
 
   const num = Number(frm.inNumero.value);
 
-  let estrela = "";
+  let estrelas = ""; // teste de depuração
   for (let i = 1; i <= num; i++) {
     if (i % 2 == 1) {
         estrelas = estrelas + '*'
