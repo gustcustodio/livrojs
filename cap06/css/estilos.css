@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img.normal {
+  float: left;
+  width: 300px;
+}
+
+img.alta {
+  float: left;
+  width: 300px;
+  height: 420px;
+}
+
+h1 {
+  border-bottom-style: inset;
+}
+
+pre {
+  font-size: 1.2em;
+}
+
+.fonte-azul {
+  color: blue;
+}
+
+.oculta {
+  display: none;
+}
+
+.exibe {
+  display: inline;
+}
+
+.italico {
+  font-style: italic;
+}
+
+div {
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 5px;
+}
