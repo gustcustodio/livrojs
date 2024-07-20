@@ -1,23 +1,34 @@
 const frm = document.querySelector("form");
 const resp1 = document.querySelector("#outResp1");
 const resp2 = document.querySelector("#outResp2");
-let soma = 0;
-let divisores = 0;
-let resposta = "";
 
 frm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const num = Number(frm.inNumero.value);
-  let resposta = `Divisores do ${num}: `;
+  const ultimo = num / 2;
+  let soma = 0;
+  let divisores = "";
 
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i < num / 2; i++) {
     if (num % i == 0) {
-      divisores = i;
-      soma += i
-      resposta += ` ${divisores},`;
+      soma += i;
+      divisores += i + ", ";
     }
   }
 
-  resp1.innerText = `${resposta} (Soma: ${soma})`;
+  soma += ultimo;
+
+  if (soma === num) {
+    resp1.innerText = `Divisores de ${num}: ${divisores}${ultimo} (Soma: ${soma})`;
+    resp2.innerText = `${num} é um Número Perfeito`;
+  } else {
+    resp1.innerText = `Divisores de ${num}: ${divisores}${ultimo} (Soma: ${soma})`;
+    resp2.innerText = `${num} não é um Número Perfeito`;
+  }
+});
+
+frm.addEventListener("reset", () => {
+  resp1.innerText = "";
+  resp2.innerText = "";
 });

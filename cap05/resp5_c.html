@@ -13,10 +13,11 @@
     <form>
       <div>
         <label for="inNumero">Número: </label>
-        <input type="number" name="numero" id="inNumero" />
+        <input type="number" name="numero" id="inNumero" min="0" required />
       </div>
       <div>
         <input type="submit" value="Verificar se é perfeito" />
+        <input type="reset" value="Limpar" />
       </div>
     </form>
     <h3 id="outResp1"></h3>
