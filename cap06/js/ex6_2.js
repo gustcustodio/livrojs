@@ -17,7 +17,8 @@ frm.addEventListener("submit", (e) => {
     frm.btSubmit.disabled = true; // troca o status do btSubmit
     frm.btNovo.className = "exibe"; // altera o nome da classe do btNovo
   } else {
-    if (erros.includes(numero)) { // verifica se o número digitado já consta no vetor erros
+    if (erros.includes(numero)) {
+      // verifica se o número digitado já consta no vetor erros
       alert(`Você já apostou o número ${numero}. Tente outro...`);
     } else {
       erros.push(numero); // adiciona número ao vetor com o método push(final do vetor)
@@ -40,7 +41,7 @@ frm.addEventListener("submit", (e) => {
   }
 
   frm.inNumero.value = ""; // limpa o campo de entrada
-  frm.inNumero.focus(); 
+  frm.inNumero.focus();
 });
 
 frm.btNovo.addEventListener("click", () => {
