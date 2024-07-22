@@ -25,14 +25,17 @@ frm.btListar.addEventListener("click", () => {
   // método reduce() concatena uma string, obtendo modelo e preço de cada veículo;
   // usa reduce para criar uma string com a lista de carros:
   const lista = carros.reduce(
-    (acumulador, carro) => acumulador + carro.modelo + " - R$" + carro.preco.toFixed(2) + "\n",
+    (acumulador, carro) =>
+      acumulador + carro.modelo + " - R$" + carro.preco.toFixed(2) + "\n",
     ""
   );
   resp.innerText = `Lista do carros cadastrados \n${"-".repeat(40)}\n${lista}`;
 });
 // evento de clique no botão Filtrar:
 frm.btFiltrar.addEventListener("click", () => {
-  const maximo = Number(prompt("Qual o valor máximo que o cliente deseja pagar?"));
+  const maximo = Number(
+    prompt("Qual o valor máximo que o cliente deseja pagar?")
+  );
   if (maximo == 0 || isNaN(maximo)) {
     return;
   }
@@ -47,7 +50,9 @@ frm.btFiltrar.addEventListener("click", () => {
   for (const carro of carrosFilter) {
     lista += `${carro.modelo} - R$${carro.preco.toFixed(2)}\n`;
   }
-  resp.innerText = `Carros até R$${maximo.toFixed(2)}\n${"-".repeat(40)}\n${lista}`;
+  resp.innerText = `Carros até R$${maximo.toFixed(2)}\n${"-".repeat(
+    40
+  )}\n${lista}`;
 });
 
 frm.btSimular.addEventListener("click", () => {
@@ -66,5 +71,7 @@ frm.btSimular.addEventListener("click", () => {
     lista += `${carro.modelo} - R$${carro.preco.toFixed(2)}\n`;
   }
 
-  resp.innerText = `Carros com desconto ${desconto}%\n${"-".repeat(40)}\n${lista}`;
+  resp.innerText = `Carros com desconto ${desconto}%\n${"-".repeat(
+    40
+  )}\n${lista}`;
 });
