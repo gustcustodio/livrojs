@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 6 - Exemplo 4</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <img src="img/ex6_4.jpg" alt="Brinquedoteca" class="alta" />
+    <h1>Programa Brinquedoteca</h1>
+    <form>
+        <div>
+            <label for="inNome">Nome da criança: </label>
+            <input type="text" name="nome" id="inNome" required autofocus> 
+        </div>
+        <div>
+            <label for="inIdade">Idade: </label>
+            <input type="number" name="idade" id="inIdade" min="0" required>
+            <input type="submit" value="Adicionar">
+        </div>
+        <div>
+            <input type="button" value="Listar todos" id="btListar">
+            <input type="button" value="Resumir por idade" id="btResumir">
+        </div>
+    </form>
+    <pre></pre>
+    <script src="js/ex6_4.js"></script>
+  </body>
+</html>
