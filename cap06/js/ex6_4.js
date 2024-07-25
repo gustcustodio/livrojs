@@ -8,7 +8,7 @@ frm.addEventListener("submit", (e) => {
 
   const nome = frm.inNome.value;
   const idade = Number(frm.inIdade.value);
-  criancas.push({ nome, idade }); // adiciona dados o vetor de objetos
+  criancas.push({ nome, idade }); // adiciona dados ao vetor de objetos
   frm.reset();
   frm.inNome.focus();
   frm.btListar.dispatchEvent(new Event("click")); // dispara click em btListar
