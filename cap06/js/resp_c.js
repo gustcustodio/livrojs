@@ -31,6 +31,10 @@ frm.btListar.addEventListener("click", () => {
 });
 
 frm.btAprovados.addEventListener("click", () => {
+  if (candidatos.length == 0) {
+    alert("Não há candidatos na lista!");
+    return;
+  }
   const corte = Number(prompt("Número de acertos para aprovação?"));
 
   const candidatosFilter = candidatos.filter(
