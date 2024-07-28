@@ -8,16 +8,37 @@ let lista = "Números: ";
 frm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const num = frm.inNumero.value;
+  const num = Number(frm.inNumero.value);
 
-  if (num === "") {
+  if (isNaN(num)) {
     alert("Por favor, informe um número.");
     return;
   }
 
-  numeros.push(num);
-  resp1.innerText = lista + numeros.join(", ");
+  if (numeros.includes(num)) {
+    alert(`O número ${num} já está na lista!`);
+  } else {
+    numeros.push(num);
+    resp1.innerText = lista + numeros.join(", ");
+  }
 
   frm.reset();
   frm.inNumero.focus();
+});
+
+frm.btVerificar.addEventListener("click", () => {
+  let ordenado = true;
+  for (let i = 0; i < numeros.length - 1; i++) {
+    if (numeros[i] > numeros[i + 1]) {
+      ordenado = false;
+      break;
+    }
+  }
+
+  if (ordenado) {
+    resp2.innerText = "Os números digitados estão em ordem crescente!";
+  } else {
+    resp2.innerText =
+      "Atenção! Os números digitados não estão em ordem crescente.";
+  }
 });
