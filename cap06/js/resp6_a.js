@@ -6,8 +6,8 @@ const clubes = [];
 frm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const clube = frm.inClube.value;
-  clubes.push(clube);
+  const nome = frm.inClube.value;
+  clubes.push(nome);
 
   frm.reset();
   frm.inClube.focus();
@@ -17,12 +17,32 @@ frm.addEventListener("submit", (e) => {
 frm.btListar.addEventListener("click", () => {
   if (clubes.length == 0) {
     alert("Não há clubes na lista!");
+    frm.inClube.focus();
     return;
   }
-  resp.innerText = clubes.join("\n");
+
+  let lista = "";
+  for (const clube of clubes) {
+    lista += `${clube}\n`;
+  }
+  resp.innerText = lista;
 });
 
-/* montar a tabela de jogos, no formato primeiro x último, segundo x penúltimo 
-e assim por diante. exibir mensagem e não listar a tabela de jogos, caso o número
-de clubes informados seja ímpar. */
-frm.btTabela.addEventListener("click", () => {});
+frm.btTabela.addEventListener("click", () => {
+  const tam = clubes.length;
+
+  if (tam == 0 || tam % 2 == 1) {
+    alert("Deve haver número par de clubes!");
+    inClube.focus();
+    return;
+  }
+
+  let jogos = "";
+  const ultimo = tam - 1;
+
+  for (i = 0; i < tam / 2; i++) {
+    jogos += clubes[i] + " x " + clubes[ultimo - i] + "\n";
+  }
+
+  resp.innerText = jogos;
+});
