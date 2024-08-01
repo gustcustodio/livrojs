@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 7 - Exemplo 8</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <img src="img/ex7_8.jpg" alt="Caixa da loja" />
+    <h1>Programa Caixa da Loja</h1>
+    <form>
+      <div>
+        <label for="inDataVenc">Data de vencimento: </label>
+        <input type="date" name="data" id="inDataVenc" autofocus required />
+      </div>
+      <div>
+        <label for="inValor">Valor da conta: R$</label>
+        <input
+          type="number"
+          name="valor"
+          id="inValor"
+          min="0"
+          step="0.01"
+          class="alinha-direita"
+          required
+        />
+        <input type="submit" value="Calcular multa e juros" />
+      </div>
+      <div>
+        <label for="outMulta">Valor da multa: R$</label>
+        <input
+          type="number"
+          name="multa"
+          id="outMulta"
+          class="alinha-direita"
+          readonly
+        />
+      </div>
+      <div>
+        <label for="outJuros">Valor do juros: R$</label>
+        <input type="number" name="juros" id="outJuros" class="alinha-direita" readonly>
+    </div>
+    <div>
+        <label for="outTotal">Total a pagar: R$</label>
+        <input type="number" name="total" id="outTotal" class="alinha-direita" readonly>
+        <input type="reset" value="Nova conta">
+    </div>
+    </form>
+    <script src="js/ex7_8.js"></script>
+  </body>
+</html>
