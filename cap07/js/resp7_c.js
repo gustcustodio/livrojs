@@ -10,9 +10,20 @@ frm.addEventListener("submit", (e) => {
   const valorComDesconto = valor * 0.8;
   const dataLimite = new Date();
 
-  resp2.innerText = `Valor com desconto R$${valorComDesconto.toFixed(2)}`;
+  const partes = dataInfracao.split("-");
+  dataLimite.setDate(Number(partes[2]));
+  dataLimite.setMonth(Number(partes[1] - 1));
+  dataLimite.setFullYear(Number(partes[0]));
 
-  console.log(dataInfracao);
+  const dia = dataLimite.getDay();
+
+  dataLimite.setDate(dia + 90);
+  const mes = dataLimite.getMonth() + 1;
+  const ano = dataLimite.getFullYear();
+
+  resp1.innerText = `Data limite para pagamento com desconto: 
+  ${dia < 10 ? "0" + dia : dia}/${mes < 10 ? "0" + mes : mes}/${ano}`;
+  resp2.innerText = `Valor com desconto R$${valorComDesconto.toFixed(2)}`;
 });
 
 /* Suponha que o prazo para o pagamento de uma infração de trânsito com desconto
