@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 8 - Exemplo 2</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <img src="img/ex8_2.jpg" alt="Em 10x" class="normal" />
+    <h1>Revenda Avenida - Promoção</h1>
+    <form>
+      <div>
+        <label for="inModelo">Modelo do veículo: </label>
+        <input type="text" name="modelo" id="inModelo" required autofocus />
+      </div>
+      <div>
+        <label for="inAno">Ano de Fabricação: </label>
+        <input type="number" name="ano" id="inAno" required />
+      </div>
+      <div>
+        <label for="inPreco">Preço: R$</label>
+        <input
+          type="number"
+          name="preco"
+          id="inPreco"
+          step="0.01"
+          min="0"
+          required
+        />
+      </div>
+      <div>
+        <input type="submit" value="Classificar - Calcular Entrada Parcelas" />
+      </div>
+    </form>
+    <h3 id="outResp1"></h3>
+    <h3 id="outResp2"></h3>
+    <h3 id="outResp3"></h3>
+    <script src="js/ex8_2.js"></script>
+  </body>
+</html>
