@@ -19,11 +19,65 @@ function incluir() {
 
 function listar() {
   titulo("===< Lista de Vinhos Cadastrados >===");
-  console.log("Marca............... Tipo............... Preço R$")
+  console.log("Marca............... Tipo............... Preço R$");
 
   for (const vinho of vinhos) {
-    
+    console.log(
+      `${vinho.marca.padEnd(20)} ${vinho.tipo.padEnd(20)} ` +
+        `${vinho.preco.toFixed(2).padStart(9)}`
+    );
   }
+}
+
+function pesquisar() {
+  titulo("===< Pesquisa por Tipo de Vinho >===");
+
+  const pesq = prompt("Tipo: ");
+
+  let contador = 0;
+  console.log("Marca............... Tipo............... Preço R$");
+
+  for (const vinho of vinhos) {
+    if (vinho.tipo.toUpperCase().includes(pesq.toUpperCase())) {
+      console.log(
+        `${vinho.marca.padEnd(20)} ${vinho.tipo.padEnd(20)} ` +
+          `${vinho.preco.toFixed(2).padStart(9)}`
+      );
+      contador++;
+    }
+  }
+
+  if (contador == 0) {
+    console.log(`Não há vinhos cadastrados do tipo "${tipo}"`);
+  }
+}
+
+function calcularMedia() {
+  titulo("===< Média e Destaques do Cadastro de Vinhos >===");
+
+  const num = vinhos.length;
+  if (num == 0) {
+    console.log("Não há vinhos cadastrados.");
+    return;
+  }
+
+  let total = 0;
+  for (const vinho of vinhos) {
+    total += vinho.preco;
+  }
+
+  const media = total / num;
+
+  const vinhos2 = [...vinhos];
+
+  vinhos2.sort((a, b) => a.preco - b.preco);
+
+  const menor = vinhos2[0];
+  const maior = vinhos2[num - 1];
+
+  console.log(`Preço médio dos vinhos: R$${media.toFixed(2)}`);
+  console.log(`Menor valor: R$${menor.preco.toFixed(2)} - ${menor.marca}`);
+  console.log(`Maior valor: R$${maior.preco.toFixed(2)} - ${maior.marca}`);
 }
 
 do {
