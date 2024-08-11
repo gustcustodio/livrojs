@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 8 - Exemplo 4</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <img src="img/ex8_4.jpg" alt="Pizzaria" class="normal">
+    <h1>Pizzaria Avenida - Controle de Pedidos</h1>    
+    <form>
+        <div>
+            Item do pedido: 
+            <input type="radio" name="produto" id="rbPizza" checked autofocus> Pizza
+            <input type="radio" name="produto" id="rbBebida"> Bebida
+            <span>Item: </span>
+            <select name="pizza" id="inPizza">
+                <option value="media">Pizza Média</option>
+                <option value="grande">Pizza Grande</option>
+                <option value="familia">Pizza Família</option>
+            </select>
+            <select name="bebida" id="inBebida" class="oculta">
+                <option value="refri">Refrigerante Litro</option>
+                <option value="suco">Jarra de Suco</option>
+                <option value="agua">Água Mineral</option>
+            </select>
+        </div>
+        <div>
+            Detalhes do item:
+            <input type="text" name="detalhes" id="inDetalhes" class="detalhes">
+            <input type="submit" value="Adicionar">
+        </div>
+    </form>
+    <pre></pre>
+    <script src="js/ex8_4.js"></script>
+</body>
+</html>
